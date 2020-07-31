@@ -9,6 +9,7 @@ jobs:
   new-release:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
