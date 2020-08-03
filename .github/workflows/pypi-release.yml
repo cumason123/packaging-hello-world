@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build-and-publish:
+  pypi-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,5 +23,15 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.pypi_password }}
+  create-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.8"
+      - name: Install Updated PyPI Package
+        run: pip install -U cumason-helloworld-package
       - name: Create Tag
         run: python pypi_packaging.py
