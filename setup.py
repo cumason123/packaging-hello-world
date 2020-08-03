@@ -1,4 +1,4 @@
 from setuptools import setup
 setup(name="cumason-helloworld-package",
-      version='v1.1',
+      version='v2.0',
       packages=['helloworld'])
