@@ -3,19 +3,23 @@ from git import Repo
 import os
 
 
-_PACKAGE_PYPI_VERSION="1.0.0"
+_LOCAL_PYPI_VERSION="1.0.0"
 
 def createTag():
-    # version function only works on python3.8
-    # this pypi_version should be the most updated version. github workflow
-    # isntalls most updated package
+    # metadata.version only works on python3.8
+    # Make sure to install most updated version of package 
     pypi_version = version('cumason-helloworld-package')
 
-    if _PACKAGE_PYPI_VERSION == pypi_version:
-        # Create tag and push tag to master
+
+    # Check pypi and local package version match
+    if _LOCAL_PYPI_VERSION == pypi_version:
+        # Create tag
         repo = Repo(os.getcwd())
-        repo.create_tag(_PACKAGE_PYPI_VERSION)
-        repo.remote().push(_PACKAGE_PYPI_VERSION)
+        repo.create_tag(_LOCAL_PYPI_VERSION)
+
+        # Push tag to origin master
+        origin = repo.remote()
+        origin.push(_LOCAL_PYPI_VERSION)
     else:
         # PyPI publish likely failed
         exit(1)
