@@ -3,7 +3,7 @@ from git import Repo
 import os
 
 
-_CLOUDEVENTS_PYPI_VERSION="v3.1.0"
+_CLOUDEVENTS_PYPI_VERSION="v3.1.1"
 
 def createTag():
     pypi_version = version('cumason-helloworld-package')
