@@ -4,12 +4,12 @@ import os
 
 
 # FORMAT: 1.x.x
-_LOCAL_PYPI_VERSION="1.0.1"
+_LOCAL_PYPI_VERSION="1.0.2"
 
 def createTag():
     # metadata.version only works on python3.8
     # Make sure to install most updated version of package 
-    pypi_version = version('cumason-helloworld-package')
+    pypi_version = version('cumason123-helloworld')
 
 
     # Check pypi and local package version match
