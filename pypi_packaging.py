@@ -4,7 +4,7 @@ import os
 
 
 # FORMAT: 1.x.x
-_LOCAL_PYPI_VERSION="1.0.0"
+_LOCAL_PYPI_VERSION="1.0.1"
 
 def createTag():
     # metadata.version only works on python3.8
