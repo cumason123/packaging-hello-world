@@ -1,4 +1,4 @@
-name: PyPi-Release
+name: PyPI-Release
 
 on:
   push:
@@ -23,6 +23,6 @@ jobs:
         with:
           password: ${{ secrets.pypi_password }}
       - name: Install Updated PyPI Package
-        run: pip install -U cumason-helloworld-package
+        run: pip install -U cumason123-helloworld
       - name: Create Tag
         run: python pypi_packaging.py
