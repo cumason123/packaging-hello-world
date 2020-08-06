@@ -13,7 +13,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8",
     ],
-    packages="helloworld",
     package_dir={'':'src'},
+    packages=["helloworld"],
     version=_LOCAL_PYPI_VERSION
 )
