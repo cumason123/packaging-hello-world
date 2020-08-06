@@ -6,6 +6,7 @@ setup(
     name="cumason123-helloworld",
     summary="Example automated pypi packaging",
     long_description_content_type="text/markdown",
+    description_file="README.md",
     author="Curtis Mason",
     author_email="cumason@bu.edu",
     classifiers=[
