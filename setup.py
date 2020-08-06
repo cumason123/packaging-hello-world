@@ -1,12 +1,14 @@
 from setuptools import setup
 from pypi_packaging import _LOCAL_PYPI_VERSION
 
+with open('./README.md', 'r') as file:
+    long_description = file.read()
 
 setup(
     name="cumason123-helloworld",
     summary="Example automated pypi packaging",
     long_description_content_type="text/markdown",
-    description_file="README.md",
+    long_description=long_description,
     home_page="http://cumason.me/",
     author="Curtis Mason",
     author_email="cumason@bu.edu",
