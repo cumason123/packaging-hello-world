@@ -14,5 +14,6 @@ setup(
         "Programming Language :: Python :: 3.8",
     ],
     packages="src/helloworld",
+    package_dir={'':'src'},
     version=_LOCAL_PYPI_VERSION
 )
