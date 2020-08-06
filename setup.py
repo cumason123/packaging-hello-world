@@ -7,6 +7,7 @@ setup(
     summary="Example automated pypi packaging",
     long_description_content_type="text/markdown",
     description_file="README.md",
+    home_page="http://cumason.me/",
     author="Curtis Mason",
     author_email="cumason@bu.edu",
     classifiers=[
